@@ -1,5 +1,10 @@
 <x-app-layout>
+
     <div class="p-6 mt-4 flex flex-col w-[90%] mx-auto h-full text-slate-300 shadow-md rounded-lg bg-clip-border">
+        <div class="mb-4 flex justify-end">
+            <a class="bg-orange-900 px-6 py-2" href="/client/create">Create a Client</a>
+        </div>
+
         <table class="w-full text-left table-auto min-w-max">
             <thead>
             <tr>

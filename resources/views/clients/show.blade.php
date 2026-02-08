@@ -51,6 +51,9 @@
             <p class="text-sm text-slate-300">
                 <a class="bg-blue-500 px-6 rounded-sm py-2 font-bold" href="/client/{{$client->id}}/edit">Edit {{$client->name}} </a>
             </p>
+            <p class="text-sm mt-8 text-slate-300">
+                <a class="bg-orange-500 px-6 rounded-sm py-2 font-bold" href="/clients">Back to clients</a>
+            </p>
         </h3>
         <br>
     </div>

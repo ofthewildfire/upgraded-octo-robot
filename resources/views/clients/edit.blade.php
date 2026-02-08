@@ -30,7 +30,12 @@
                 <br>
                 <div>
                     <button class="bg-green-900 px-6 rounded-sm py-2 font-bold">Update {{$client->name}} </button>
+                    <button class="bg-red-900 ml-3 px-6 rounded-sm py-2 font-bold" form="delete_client_record">Delete {{$client->name}} </button>
                 </div>
+            </form>
+            <form id="delete_client_record" action="/client/{{$client->id}}/destroy" method="post">
+                @csrf
+                @method("delete")
             </form>
         </main>
         <br>

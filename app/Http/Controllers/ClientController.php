@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
 use App\Models\Client;
 use Illuminate\Http\Request;
@@ -36,5 +37,24 @@ class ClientController extends Controller
 
 
         return redirect("/client/" . $client->id);
+    }
+
+    public function create()
+    {
+        return view("clients.create");
+    }
+
+    public function store(StoreClientRequest $request)
+    {
+        Client::create($request->validated());
+
+        return redirect("/clients");
+    }
+
+    public function destroy(Client $client)
+    {
+        $client->delete();
+
+        return redirect("/clients");
     }
 }
