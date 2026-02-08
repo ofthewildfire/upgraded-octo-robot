@@ -2,6 +2,6 @@
 
 <div>
     @error($name)
-        {{ $message }}
+        <span class="text-red-500 text-sm italic"> {{ $message }}</span>
     @enderror
 </div>
