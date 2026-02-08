@@ -2,6 +2,7 @@
     <div class="p-6 mt-4 flex flex-col w-[90%] mx-auto h-full text-slate-300  rounded-lg bg-clip-border">
         <main class="w-full text-left table-auto min-w-max">
             <section>
+                <h2 class="mb-5 text-2xl font-bold text-center"> <span class="underline text-gray-400">{{$client->name}}</span> Contact Details </h2>
             <div>
                 <h2 class="p-4 border-b border-slate-600 bg-slate-700">
                     <p class="text-sm font-normal leading-none text-slate-300">
