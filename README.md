@@ -22,7 +22,7 @@
 
 ## 🛠️ Technology Stack
 
-- **Framework:** Laravel 11.x
+- **Framework:** Laravel 12.x
 - **Language:** PHP 8.2+
 - **Database:** SQLite 3
 - **Authentication:** Laravel Breeze
