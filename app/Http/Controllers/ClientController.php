@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateClientRequest;
 use App\Models\Client;
 use Illuminate\Http\Request;
 
@@ -27,5 +28,13 @@ class ClientController extends Controller
         return view('clients.edit', [
            'client' => $client
         ]);
+    }
+
+    public function update(UpdateClientRequest $request,  Client $client)
+    {
+        $client->update($request->validated());
+
+
+        return redirect("/client/" . $client->id);
     }
 }

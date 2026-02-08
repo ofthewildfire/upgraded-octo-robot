@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
 
 
 //Client routes
+Route::patch("/client/{client}/update", [ClientController::class, 'update']);
 Route::get("/client/{client}/edit", [ClientController::class, 'edit']);
 Route::get("/client/{client}", [ClientController::class, 'show']);
 Route::get("/clients", [ClientController::class, 'index']);
