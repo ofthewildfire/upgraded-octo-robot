@@ -21,12 +21,15 @@ Route::middleware('auth')->group(function () {
 
 
 //Client routes
-Route::delete('/client/{client}/destroy', [ClientController::class, 'destroy']);
-Route::post("/clients", [ClientController::class, 'store']);
-Route::get("/client/create", [ClientController::class, 'create']);
-Route::patch("/client/{client}/update", [ClientController::class, 'update']);
-Route::get("/client/{client}/edit", [ClientController::class, 'edit']);
-Route::get("/client/{client}", [ClientController::class, 'show']);
-Route::get("/clients", [ClientController::class, 'index']);
+Route::middleware('auth')->group(function () {
+    Route::delete('/client/{client}/destroy', [ClientController::class, 'destroy']);
+    Route::post("/clients", [ClientController::class, 'store']);
+    Route::get("/client/create", [ClientController::class, 'create']);
+    Route::patch("/client/{client}/update", [ClientController::class, 'update']);
+    Route::get("/client/{client}/edit", [ClientController::class, 'edit']);
+    Route::get("/client/{client}", [ClientController::class, 'show']);
+    Route::get("/clients", [ClientController::class, 'index'])->name("clients");
+});
+
 
 require __DIR__.'/auth.php';
