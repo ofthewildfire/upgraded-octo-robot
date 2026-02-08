@@ -63,6 +63,27 @@
 
 ---
 
+## 📸 Screenshots
+
+### Authentication
+![Login Page](screenshots/login.png)
+![Register Page](screenshots/register.png)
+
+### Client Management
+![Client List](screenshots/list_view.png)
+*Paginated list of all clients with action buttons*
+
+![Create Client](screenshots/errors.png)
+*Form with validation for adding new clients*
+
+![Client Details](screenshots/details.png)
+*Individual client view with contact information*
+
+![Client Edit](screenshots/edit.png)
+*Form to edit client information*
+
+---
+
 ## 🚀 Installation
 
 ### Prerequisites
